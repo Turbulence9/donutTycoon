@@ -14,7 +14,7 @@
     <h1><%=SD[0].shop_name.charAt(0).toUpperCase()+SD[0].shop_name.substring(1)%> <a href='<%=SD[0].id%>/edit'>(edit)</a></h1>
   </div>
     <form action='/shops?_method=DELETE' method='post'>
-      <input type='submit' value='x' name='d<%=SD.id%>'>
+      <input type='submit' value='x' name='d<%=SD[0].id%>'>
     </form>
   <ul>
     <li> City:

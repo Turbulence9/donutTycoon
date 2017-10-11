@@ -9,9 +9,13 @@
   </head>
   <body>
     <h1>Donut Menu</h1>
-    <a href='/donuts/new'>Add new Donut</a>
+    <div>
+      <a href='/donuts/new'>Add new Donut</a>
+    </div>
     <% donuts.forEach((donut) => { %>
-    <a href="donuts/<%=donut.id%>"><h3><%=donut.name.charAt(0).toUpperCase()+donut.name.substring(1)%> Donut</h3></a>
+      <div style="float:left">
+        <a href="donuts/<%=donut.id%>"><h3><%=donut.name.charAt(0).toUpperCase()+donut.name.substring(1)%> Donut</h3></a>
+      </div>
     <form action='/donuts?_method=DELETE' method='post'>
       <input type='submit' value='x' name='d<%=donut.id%>'>
     </form>

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
   </head>
   <body>
-    <h2><%=donut.name.charAt(0).toUpperCase()+donut.name.substring(1)%> Donut <a href='<%=donut.id%>/edit'>(edit)</a></h2>
+    <div style="float:left">
+      <h2><%=donut.name.charAt(0).toUpperCase()+donut.name.substring(1)%> Donut <a href='<%=donut.id%>/edit'>(edit)</a></h2>
+    </div>
     <form action='/donuts?_method=DELETE' method='post'>
       <input type='submit' value='x' name='d<%=donut.id%>'>
     </form>
