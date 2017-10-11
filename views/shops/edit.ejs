@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Edit Shop</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+</head>
+
+<body>
+  <h2>Edit <%=shop.name.charAt(0).toUpperCase()+shop.name.substring(1)%></h2>
+  <form action='/shops/<%=shop.id%>?_method=PATCH' method='post'>
+    <div>
+      <label>City:</label>
+      <input value='<%=shop.city%>' name='city'>
+    </div>
+    <div>
+      <input type="submit" name="Submit">
+    </div>
+  </form>
+  <a href='/shops/<%=shop.id%>'>Back</a>
+</body>
+
+</html>

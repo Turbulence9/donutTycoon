@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Donut</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+  </head>
+  <body>
+    <h2><%=donut.name.charAt(0).toUpperCase()+donut.name.substring(1)%> Donut <a href='<%=donut.id%>/edit'>(edit)</a></h2>
+    <form action='/donuts?_method=DELETE' method='post'>
+      <input type='submit' value='x' name='d<%=donut.id%>'>
+    </form>
+    <ul>
+      <li> Topping: <%= donut.topping %></li>
+      <li> Price: $<%= donut.price %>.00</li>
+    </ul>
+    <a href="/donuts">Back to Menu</a>
+  </body>
+</html>

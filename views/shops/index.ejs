@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Show Shops</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+</head>
+
+<body>
+  <div style="float:left">
+    <h1><%=SD[0].shop_name.charAt(0).toUpperCase()+SD[0].shop_name.substring(1)%> <a href='<%=SD[0].id%>/edit'>(edit)</a></h1>
+  </div>
+    <form action='/shops?_method=DELETE' method='post'>
+      <input type='submit' value='x' name='d<%=SD.id%>'>
+    </form>
+  <ul>
+    <li> City:
+      <%= SD[0].city %>
+    </li>
+  </ul>
+  <% if(SD[0].donut_name){ %>
+    <h2>Menu:</h2>
+    <% SD.forEach((donut) => { %>
+      <h3><%=donut.donut_name.charAt(0).toUpperCase()+donut.donut_name.substring(1)%> Donut</h3>
+      <ul>
+        <li> Topping:
+          <%= donut.topping %>
+        </li>
+        <li> Price: $
+          <%= donut.price %>.00</li>
+      </ul>
+      <% }); %>
+        <% } %>
+          <a href="/shops">Back to Menu</a>
+</body>
+
+</html>

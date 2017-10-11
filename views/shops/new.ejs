@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Add Shop</title>
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+</head>
+
+<body>
+  <h1>Add Shop</h1>
+  <form action='/shops' method='post'>
+    <div>
+      <label>Name: </label>
+      <input value='' name='name'>
+    </div>
+    <div>
+      <label>City: </label>
+      <input value='' name='city'>
+    </div>
+    <div>
+      <input type="submit" name="Submit">
+    </div>
+  </form>
+  <a href="/shops">Back</a>
+</body>
+
+</html>
